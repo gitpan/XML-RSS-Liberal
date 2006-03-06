@@ -1,0 +1,16 @@
+---
+name: XML-RSS-Liberal
+version: 0.01
+author: ~
+abstract: XML::RSS With A Liberal Parser
+license: perl
+requires:
+  XML::Liberal: '>= 0.05'
+  XML::RSS::LibXML: '>= 0.18'
+provides:
+  XML::RSS::Liberal:
+    file: lib/XML/RSS/Liberal.pm
+    version: 0.01
+  XML::RSS::Liberal::Parser:
+    file: lib/XML/RSS/Liberal/Parser.pm
+generated_by: Module::Build version 0.2611
