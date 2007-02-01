@@ -1,16 +1,16 @@
----
-name: XML-RSS-Liberal
-version: 0.01
-author: ~
 abstract: XML::RSS With A Liberal Parser
+author: Daisuke Maki <daisuke@endeworks.jp>, Tatsuhiko Miyagawa <miyagawa@bulknews.net>
+build_requires: 
+  Test::More: 0
+distribution_type: module
+generated_by: Module::Install version 0.64
 license: perl
-requires:
-  XML::Liberal: '>= 0.05'
-  XML::RSS::LibXML: '>= 0.18'
-provides:
-  XML::RSS::Liberal:
-    file: lib/XML/RSS/Liberal.pm
-    version: 0.01
-  XML::RSS::Liberal::Parser:
-    file: lib/XML/RSS/Liberal/Parser.pm
-generated_by: Module::Build version 0.2611
+name: XML-RSS-Liberal
+no_index: 
+  directory: 
+    - inc
+    - t
+requires: 
+  XML::LibXML: 0
+  XML::Liberal: 0
+version: 0.02
