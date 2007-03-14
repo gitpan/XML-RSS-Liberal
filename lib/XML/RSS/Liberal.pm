@@ -1,4 +1,4 @@
-# $Id: /mirror/perl/XML-RSS-Liberal/trunk/lib/XML/RSS/Liberal.pm 5376 2007-02-01T09:53:51.285589Z daisuke  $
+# $Id: /mirror/perl/XML-RSS-Liberal/trunk/lib/XML/RSS/Liberal.pm 6074 2007-03-14T09:02:55.421817Z daisuke  $
 #
 # Copyright (c) 2006-2007 Daisuke Maki <daisuke@endeworks.jp>
 # All rights reserved.
@@ -7,23 +7,14 @@ package XML::RSS::Liberal;
 use strict;
 use base qw(XML::RSS::LibXML);
 use vars qw($VERSION);
-$VERSION = '0.02';
+use XML::Liberal;
+$VERSION = '0.03';
 
-my $LoadedParser = 0;
-sub _create_parser
+sub create_libxml
 {
     my $self = shift;
-
-    if (!$LoadedParser) {
-        require XML::RSS::Liberal::Parser;
-        $LoadedParser++;
-    }
-
-    if (! $self->{_parser}) {
-        $self->{_parser} = XML::RSS::Liberal::Parser->new();
-    }
-
-    return $self->{_parser};
+    my $p    = XML::Liberal->new('LibXML');
+    return $p;
 }
 
 
@@ -49,6 +40,12 @@ XML::RSS::Liberal is a subclass of XML::RSS::LibXML, for those of you who
 want to parse broken RSS files (as they often are). It uses XML::Liberal as
 its core parser, and therefore it can parse whatever broken XML you provided,
 so as long as XML::Liberal can tolerate it.
+
+=head1 METHODS
+
+=head2 create_libxml
+
+Creates a new parser.
 
 =head1 SEE ALSO
 

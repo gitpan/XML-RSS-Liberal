@@ -1,6 +1,9 @@
 Changes
 =======
 
+0.03_01 - 14 Mar 2007
+  - Work with XML::RSS::LibXML 0.30.
+
 0.02 - 01 Feb 2007
   * Not much interesting changes, no need to update.
   - Minor documentation fixes.
