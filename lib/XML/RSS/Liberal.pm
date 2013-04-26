@@ -1,14 +1,9 @@
-# $Id: /mirror/perl/XML-RSS-Liberal/trunk/lib/XML/RSS/Liberal.pm 6074 2007-03-14T09:02:55.421817Z daisuke  $
-#
-# Copyright (c) 2006-2007 Daisuke Maki <daisuke@endeworks.jp>
-# All rights reserved.
-
 package XML::RSS::Liberal;
 use strict;
 use base qw(XML::RSS::LibXML);
 use vars qw($VERSION);
 use XML::Liberal;
-$VERSION = '0.03';
+$VERSION = '0.04';
 
 sub create_libxml
 {

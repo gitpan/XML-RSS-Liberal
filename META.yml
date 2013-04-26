@@ -1,20 +1,41 @@
---- 
-abstract: XML::RSS With A Liberal Parser
-author: Daisuke Maki <daisuke@endeworks.jp>, Tatsuhiko Miyagawa <miyagawa@bulknews.net>
-build_requires: 
-  Test::More: 0
-distribution_type: module
-generated_by: Module::Install version 0.65
-license: perl
-meta-spec: 
-  url: http://module-build.sourceforge.net/META-spec-v1.3.html
-  version: 1.3
+---
+abstract: 'XML::RSS With A Liberal Parser'
+author:
+  - 'Daisuke Maki <daisuke@endeworks.jp>, Tatsuhiko Miyagawa <miyagawa@bulknews.net>'
+build_requires:
+  ExtUtils::MakeMaker: 0
+configure_requires:
+  CPAN::Meta: 0
+  CPAN::Meta::Prereqs: 0
+  Module::Build: 0.38
+dynamic_config: 0
+generated_by: 'Minilla/v0.0.53, CPAN::Meta::Converter version 2.120921'
+license: unknown
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
 name: XML-RSS-Liberal
-no_index: 
-  directory: 
-    - inc
+no_index:
+  directory:
     - t
-requires: 
+    - xt
+    - inc
+    - share
+    - eg
+    - examples
+    - author
+provides:
+  XML::RSS::Liberal:
+    file: lib/XML/RSS/Liberal.pm
+    version: 0.04
+requires:
+  Test::More: 0
   XML::Liberal: 0
   XML::RSS::LibXML: 0.30
-version: 0.03
+resources:
+  bugtracker: https://github.com/lestrrat/p5-XML-RSS-Liberal/issues
+  homepage: https://github.com/lestrrat/p5-XML-RSS-Liberal
+  repository: git://github.com/lestrrat/p5-XML-RSS-Liberal.git
+version: 0.04
+x_contributors:
+  - 'Daisuke Maki <lestrrat+github@gmail.com>'
